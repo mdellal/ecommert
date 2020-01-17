@@ -1,0 +1,48 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .(css|js|jpg|jpeg|png|gif|ico|swf|bmp)$ - [nocase,redirect=404,last]
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .(css|js|jpg|jpeg|png|gif|ico|swf|bmp)$ - [nocase,redirect=404,last]
+RewriteEngine on
+
+ErrorDocument 404 /404.php
+
+RewriteRule ^sitemap.xml$ sitemap.php [NC,L]
+RewriteRule ^hesabim$ hesabim.php [NC,L]
+RewriteRule ^uye-ol$ uye-ol.php [NC,L]
+RewriteRule ^uye-girisi$ login.php [NC,L]
+RewriteRule ^guvenli-cikis$ logout.php [NC,L]
+RewriteRule ^siparislerim$ siparislerim.php [NC,L]
+RewriteRule ^hesap-ayarlari$ hesap-ayarlari.php [NC,L]
+
+RewriteRule ^destek-oku-([0-9a-zA-Z-_]+)-([0-9]+)$  destek-oku.php?sef=$1&destek_id=$2 [L,QSA]
+RewriteRule ^siparis-detay-([0-9a-zA-Z-_]+)-([0-9]+)$  siparis-detay.php?sef=$1&siparis_id=$2 [L,QSA]
+
+
+RewriteRule ^siparisler$ siparisler.php [NC,L]
+RewriteRule ^bilgi-bankasi$ bilgi-bankasi.php [NC,L]
+RewriteRule ^tamamlanan-siparis$ tamamlanan-siparis.php [NC,L]
+RewriteRule ^hesap-ayarlari$ hesap-ayarlari.php [NC,L]
+RewriteRule ^yeni-sifre$ yeni-sifre.php [NC,L]
+RewriteRule ^uye-onay$ uye-onay.php [NC,L]
+RewriteRule ^yeni-destek$ yeni-destek.php [NC,L]
+RewriteRule ^destekler$ destekler.php [NC,L]
+RewriteRule ^duyurular$ duyurular.php [NC,L]
+
+
+#SSL
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+
+
+
+
+
+
+
+
+
+
